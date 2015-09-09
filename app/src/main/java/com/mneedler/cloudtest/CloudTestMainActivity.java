@@ -34,6 +34,11 @@ public class CloudTestMainActivity extends AppCompatActivity {
             return true;
         }
 
+        if (id == R.id.register) {
+            new GcmRegistrationAsyncTask(this).execute();
+            return true;
+        }
+
         return super.onOptionsItemSelected(item);
     }
 }
